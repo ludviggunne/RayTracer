@@ -2,7 +2,6 @@
 #include "materials/mat_list.h"
 #include "tests/test.h"
 #include "utility.h"
-#include "image/denoising.h"
 
 #include "objects/mesh.h"
 #include "objects/buffers.h"
