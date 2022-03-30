@@ -15,68 +15,35 @@
 
 /* ------------------------------------------ */
 
-static unsigned int g_seed = 0;
+unsigned int g_seed;
 
 // Used to seed the generator.           
-inline void fast_srand(int seed) {
-    g_seed = seed;
-}
+void fast_srand(int seed);
 
 // Compute a pseudorandom integer.
 // Output value in range [0, 32767]
-inline int fast_rand(void) {
-    g_seed = (214013 * g_seed + 2531011);
-    return (g_seed >> 16) & 0x7FFF;
-}
+int fast_rand(void);
 
 #define FRAND_MAX 0b1000000000000000;
 
 /* ------------------------------------------ */
 
 
-inline double randd()
-{
-    return ((double)fast_rand()) / FRAND_MAX;
-}
+double randd();
 
-inline double randd_range(double min, double max)
-{
-    return min + randd() * (max - min);
-}
+double randd_range(double min, double max);
 
-inline vec3 randv()
-{
-    return (vec3) { randd(), randd(), randd() };
-}
+vec3 randv();
 
-inline vec3 randv_range(double min, double max)
-{
-    return (vec3) { randd_range(min, max), randd_range(min, max), randd_range(min, max) };
-}
+vec3 randv_range(double min, double max);
 
-inline void randuv(vec3* v)
-{
-    *v = (vec3){ randd_range(-1, 1), randd_range(-1, 1), randd_range(-1, 1) };
-    vec3_nrm(v, v);
-}
+void randuv(vec3* v);
 
-inline void gamma2(vec3* v)
-{
-    *v = (vec3){ sqrt(v->x), sqrt(v->y), sqrt(v->z) };
-}
+void gamma2(vec3* v);
 
-inline void atten(vec3* cout, vec3* catt)
-{
-    cout->x *= catt->x;
-    cout->y *= catt->y;
-    cout->z *= catt->z;
-}
+void atten(vec3* cout, vec3* catt);
 
-inline malloc_check(void* ptr)
-{
-    if (!ptr)
-        printf("Malloc failed");
-}
+void malloc_check(void* ptr);
 
 /* LOGGING */
 

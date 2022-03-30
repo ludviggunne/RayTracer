@@ -5,6 +5,7 @@ project(raytracer)
 
 add_executable(raytracer 
   src/main.c 
+  src/utility.c
 
   src/image/bitmap.c 
 
@@ -21,6 +22,7 @@ add_executable(raytracer
   src/renderer/renderer_misc.c
   src/renderer/renderer_trace.c 
 
+  src/structs/vector.c
   src/structs/hit_record.c 
   src/structs/ray.c 
 )
