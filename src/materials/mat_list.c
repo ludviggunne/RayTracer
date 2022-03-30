@@ -13,7 +13,7 @@ void mat_list_create(mat_list *ml, size_t capacity)
 	ml->cap = capacity;
 	ml->mats = malloc(ml->cap * sizeof *ml->mats);
 
-	if (ml->mats)
+	if (ml->mats == NULL)
 		ERROR(ERROR_ALLOC_FAIL, ERROR_MAT_LIST, ERROR_NULL);
 }
 
