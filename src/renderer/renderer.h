@@ -1,6 +1,8 @@
 #ifndef RENDERER_H
 #define RENDERER_H
 
+#include <stddef.h>
+
 #include "../image/bitmap.h"
 #include "../structs/ray.h"
 #include "../structs/camera.h"

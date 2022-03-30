@@ -1,6 +1,8 @@
 #ifndef MESH_H
 #define MESH_H
 
+#include <stddef.h>
+
 #include "object.h"
 #include <stdint.h>
 
