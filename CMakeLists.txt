@@ -27,5 +27,6 @@ add_executable(raytracer
   src/structs/ray.c 
 )
 
+if (CMAKE_C_COMPILER_ID STREQUAL "GNU")
 target_link_libraries(raytracer m)
-
+endif()
