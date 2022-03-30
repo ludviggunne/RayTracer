@@ -1,4 +1,5 @@
 #include "bitmap.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -39,8 +40,7 @@ void bmp_save(bmp *bitmap, const char* filename)
     uint32_t size = 54 + 3 * bitmap->height * padded_width;
 
     
-    FILE *f;
-    fopen_s(&f, filename, "w+b");
+    FILE *f = fopen(filename, "w+b");
 
 
 
