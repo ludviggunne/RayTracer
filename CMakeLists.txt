@@ -26,3 +26,6 @@ add_executable(raytracer
   src/structs/hit_record.c 
   src/structs/ray.c 
 )
+
+target_link_libraries(raytracer m)
+
