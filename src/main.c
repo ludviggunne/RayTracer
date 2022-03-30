@@ -10,7 +10,7 @@
 #include <string.h>
 
 #define SAMPLES 32
-#define WIDTH 800
+#define WIDTH 400
 #define ASPECTR 1
 #define HEIGHT ((uint32_t)(WIDTH / ASPECTR))
 
@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
     cam.focal_length = 1.5;
     cam.aperture = .05;
     cam.focus = (vec3) { .5, 1, .5 };
-    cam.origin = (vec3) { 4, 3, 3 };
+    cam.origin = (vec3) { 16, 3, 3 };
     cam.up = (vec3) { 0, 1, 0 };
     rdr.cam = cam;
 
