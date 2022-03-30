@@ -1,6 +1,5 @@
 #include "renderer/renderer.h"
 #include "materials/mat_list.h"
-#include "tests/test.h"
 #include "utility.h"
 
 #include "objects/mesh.h"
